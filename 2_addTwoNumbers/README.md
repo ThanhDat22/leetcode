@@ -3,6 +3,8 @@
 
 ## Problem Statement
 
+Problem is found in [Add Two Number](https://leetcode.com/problems/add-two-numbers/description/).
+
 You are given two **linked lists** that represent two non-negative numbers.  
 
 - The digits are stored in **reverse order** (the ones place comes first).  
@@ -25,6 +27,8 @@ l2 = [5,6,4]
 ```
 
 **Output:**  
+
+![Image](./addtwonumber1.jpg)
 
 ```plaintext
 [7,0,8]
@@ -136,7 +140,8 @@ run
 
 ## TAKE AWAY
 
-✅ 1. Two Pointer Technique
+### ✅ 1. Two Pointer Technique
+
 📌 Concept:
 Two pointers (l1 and l2) are used to:
 
@@ -154,7 +159,8 @@ The two-pointer technique simplifies the logic of adding corresponding digits.
 ✅ Synchronizing pointer movement
 ✅ Handling unequal list lengths
 
-✅ 2. Dummy Node Technique
+### ✅ 2. Dummy Node Technique
+
 📌 Concept:
 A dummy node is a placeholder node used to simplify linked list creation.
 

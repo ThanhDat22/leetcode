@@ -1,9 +1,6 @@
 #include <iostream>
+
 using namespace std;
-
-
-
-
 
 struct ListNode {
     int val;
@@ -16,7 +13,7 @@ struct ListNode {
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        ListNode* dummy = new ListNode(); 
+        ListNode* dummy = new ListNode(); //
         ListNode* current = dummy;
         int carry = 0;
         
