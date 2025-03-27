@@ -4,6 +4,8 @@
 
 Given an integer x, return true if x is a palindrome, and false otherwise.
 
+Problem is found in [Two Sum](https://leetcode.com/problems/two-sum/description/).
+
 ## Example 1
 
 Input: x = 121
