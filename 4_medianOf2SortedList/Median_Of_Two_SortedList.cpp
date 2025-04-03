@@ -12,7 +12,7 @@ using namespace std;
  */
 double findMedianSortedArrays(vector<int>& vec1, vector<int>& vec2) {
     if (vec1.size() > vec2.size()) {
-        return findMedianSortedArrays(vec2, vec1);
+        return findMedianSortedArrays(vec2, vec1); // Ensure vec1 is the smaller vector
     }
 
     int m = vec1.size();
@@ -20,24 +20,26 @@ double findMedianSortedArrays(vector<int>& vec1, vector<int>& vec2) {
     int low = 0, high = m;
 
     while (low <= high) {
-        int i = (low + high) / 2;
-        int j = (m + n + 1) / 2 - i;
+        int i = (low + high) / 2; // Partition index for vec1
+        int j = (m + n + 1) / 2 - i; // Partition index for vec2
 
         int first_left = (i == 0) ? INT_MIN : vec1[i - 1];
         int first_right = (i == m) ? INT_MAX : vec1[i];
         int second_left = (j == 0) ? INT_MIN : vec2[j - 1];
         int second_right = (j == n) ? INT_MAX : vec2[j];
 
+        // Check if we have partitioned the arrays correctly
         if (first_left <= second_right && second_left <= first_right) {
+            // Total length is even
             if ((m + n) % 2 == 0) {
                 return (max(first_left, second_left) + min(first_right, second_right)) / 2.0;
-            } else {
+            } else { // Total length is odd
                 return max(first_left, second_left);
             }
         } else if (first_left > second_right) {
-            high = i - 1;
+            high = i - 1; // Move partition in vec1 to the left
         } else {
-            low = i + 1;
+            low = i + 1; // Move partition in vec1 to the right
         }
     }
     return 0.0; // Should not reach here if inputs are valid
