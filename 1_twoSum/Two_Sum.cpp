@@ -14,7 +14,7 @@ class Solution {
             // Step 2: During iteration over the numbers, the complement is calculated for each number.
             for (size_t i = 0; i < nums.size(); i++) {
                 int current = nums.at(i); // current + complement = target
-                int complement = target - nums[i];
+                int complement = target - nums[i]; // Find the complement
                 // Step 3: It checks if the complement exists in the map. If so, the indices are returned.
                 if (map.count(complement)) {
                     result.push_back(map.at(complement));
