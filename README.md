@@ -9,6 +9,7 @@ Solutions are written in **C++**, organized by problem number/title, and each pr
 
 ## **📁 Repository Structure**
 
+```text
 .
 ├─ 1_twoSum/
 ├─ 2_addTwoNumbers/
@@ -23,6 +24,7 @@ Solutions are written in **C++**, organized by problem number/title, and each pr
 .
 .
 └─ README.md ← (this file)
+```
 
 ## **⚙️ Build & Run**
 
